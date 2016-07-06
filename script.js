@@ -23,7 +23,11 @@ function newQuote() {
       $('#source').append(author);
       $('#tweet').attr("href", "https://twitter.com/intent/tweet?text=" + quote + "-" + author);
       
-      var color = colors[getRandomInt(colors.length)]
+      var saturation = getRandomInt(50,100);
+      var lightness = getRandomInt(100 - saturation, 70);
+
+
+      var color = 'hsl(' + getRandomInt(0,360) + ', ' + saturation + '%, '+ lightness + '%)';
       
       $('#quoteContainer, body').css('background-color', color)
       $('button').css('color', color)
@@ -32,6 +36,6 @@ function newQuote() {
 
 };
 
-function getRandomInt(max) {
-  return Math.floor(Math.random() * (max))
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
 }
