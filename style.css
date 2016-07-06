@@ -1,0 +1,27 @@
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+h2{
+  margin:0px;
+}
+
+#quoteContainer{
+  background-color:red;
+  padding:10px;
+  border-radius:10px;
+  border:3px solid white;
+  color:white;
+}
+
+.btn{
+  color:red;
+}
+
+body{
+  background-color:red;
+}
