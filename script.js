@@ -14,7 +14,8 @@ function newQuote() {
       "Accept": "application/json"
     },
     dataType: "json",
-    success: function(data) {
+    success: function(response) {
+      var data = response[0];
       var quote = data.quote;
       var author = data.author;
       $('#quote').empty();
